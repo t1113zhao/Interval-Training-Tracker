@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="@dimen/period_row_height"
+        android:id="@+id/intervalHeaderView"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/intervalNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|start"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/intervalTimeTextView"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            android:layout_alignParentEnd="true"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/intervalPeriodListView"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/intervalHeaderView">
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="@dimen/period_row_height"
+        android:id="@+id/intervalFooterView"
+        android:layout_below="@+id/intervalPeriodListView"
+        android:layout_marginStart="30dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            android:text="@string/reps"
+            android:layout_alignParentStart="true"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/intervalRepsTextView"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            android:layout_alignParentEnd="true"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

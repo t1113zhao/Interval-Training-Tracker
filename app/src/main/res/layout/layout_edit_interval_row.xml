@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/editIntervalHeaderView"
+        style="@style/intervalRowStyleMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/period_row_height"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/edit_interval_row_seconds_textView"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/edit_interval_row_name_textView"
+                style="@style/editIntervalRowStyleMain"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical|start"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/periodRowStyleMainTextSize" />
+
+            <TextView
+                android:id="@+id/edit_interval_row_time_textView"
+                style="@style/editIntervalRowStyleMain"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="end|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/periodRowStyleMainTextSize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/edit_interval_row_seconds_textView"
+            style="@style/editIntervalRowStyleMain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/edit_period_row_handle"
+            android:gravity="center_vertical|start"
+            android:text="s"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize" />
+
+        <ImageButton
+            android:id="@+id/edit_interval_row_handle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/handle"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_menu" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/editIntervalPeriodRecyclerView"
+        android:layout_below="@id/editIntervalHeaderView"
+        android:layout_marginStart="30dp"
+        >
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="@dimen/period_row_height"
+        android:id="@+id/editIntervalFooterView"
+        android:layout_below="@+id/editIntervalPeriodRecyclerView"
+        android:layout_marginStart="30dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            android:text="@string/reps"
+            android:layout_alignParentStart="true"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="100dp"
+            android:id="@+id/editIntervalRepsEditText"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            android:layout_alignParentEnd="true"
+            android:inputType="number"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

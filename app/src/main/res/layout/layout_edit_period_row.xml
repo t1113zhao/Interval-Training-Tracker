@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/period_row_height"
+    android:background="@color/colorPrimaryLight"
+    >
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/edit_period_row_seconds_textView"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/edit_period_row_name_textView"
+            style="@style/editPeriodRowStyleMain"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical|start"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/periodRowStyleMainTextSize"
+            />
+
+        <EditText
+            android:id="@+id/edit_period_row_time_editText"
+            style="@style/editPeriodRowStyleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:inputType="number"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/periodRowStyleMainTextSize" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/edit_period_row_seconds_textView"
+        style="@style/editPeriodRowStyleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/periodRowStyleMainTextSize"
+        android:text="s"
+        android:layout_toStartOf="@id/edit_period_row_handle"
+        />
+
+    <ImageButton
+        android:id="@+id/edit_period_row_handle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:background="@color/colorPrimaryLight"
+        android:contentDescription="@string/handle"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_menu" />
+</RelativeLayout>
